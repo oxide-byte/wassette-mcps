@@ -1,0 +1,13 @@
+package oxidebyte:jira-wasm-mcp;
+
+/// A Wassette component exposing Jira as MCP tools.
+///
+/// Configuration is read from environment variables:
+/// - JIRA_URL: Jira base URL (default: http://localhost:8080)
+/// - JIRA_API_KEY + JIRA_USERNAME: Bearer token auth (API key takes precedence)
+/// - JIRA_USERNAME + JIRA_PASSWORD: Basic auth
+world jira {
+    /// Fetch a Jira issue by key (e.g. "PROJ-123") and return the raw JSON
+    /// response from the Jira REST API v3.
+    export get-issue: func(issue-key: string) -> result<string, string>;
+}

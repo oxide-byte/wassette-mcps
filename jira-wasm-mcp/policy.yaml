@@ -1,0 +1,13 @@
+version: "1.0"
+description: "Permission policy for jira-wasm-mcp (Jira MCP component for Wassette)"
+permissions:
+  network:
+    allow:
+      # Replace with your Jira host (must match JIRA_URL)
+      - host: "your-domain.atlassian.net"
+  environment:
+    allow:
+      - key: "JIRA_URL"
+      - key: "JIRA_USERNAME"
+      - key: "JIRA_PASSWORD"
+      - key: "JIRA_API_KEY"
