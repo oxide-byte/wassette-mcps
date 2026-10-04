@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "jira-wasm-mcp"
+    "jira-wasm-mcp",
+    "postgres-wasm-mcp"
 ]
 
 resolver = "2"

@@ -1,0 +1,9 @@
+version: "1.0"
+description: "Permission policy for postgres-wasm-mcp (Postgres MCP component for Wassette, via PostgREST)"
+permissions:
+  network:
+    allow:
+      - host: "127.0.0.1:3000"
+  environment:
+    allow:
+      - key: "POSTGREST_URL"

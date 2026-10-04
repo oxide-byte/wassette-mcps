@@ -1,0 +1,10 @@
+package local:postgres-mcp;
+
+/// A Wassette component exposing Postgres (through PostgREST) as MCP tools.
+///
+/// Configuration is read from environment variables:
+/// - POSTGREST_URL: PostgREST base URL (default: http://127.0.0.1:3000)
+world db-tools {
+    /// Fetch a user by id and return it as JSON.
+    export fetch-user-from-db: func(user-id: s32) -> result<string, string>;
+}
